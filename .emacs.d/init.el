@@ -33,14 +33,31 @@
 (set-face-foreground 'default "green")
 
 ;;列数を表示する
-;;(column-number-mode t)
+(column-number-mode t)
 
 ;;行数を表示する
 (global-linum-mode t)
 
-;;ツールバーを表示しない
+;; ファイルサイズを表示
+(size-indication-mode t)
+;; 時計を表示（好みに応じてフォーマットを変更可能）
+ (setq display-time-day-and-date t) ; 曜日・月・日を表示
+ (setq display-time-24hr-format t) ; 24時表示
+(display-time-mode t)
+;; バッテリー残量を表示
+(display-battery-mode t)
+
+;;; P65-66 CUIとGUIによる分岐
+;; ターミナル以外はツールバー、スクロールバーを非表示
+(when window-system
+  ;; tool-barを非表示
+  (tool-bar-mode 0)
+  ;; scroll-barを非表示
+  (scroll-bar-mode 0));;ツールバーを表示しない
 (tool-bar-mode -1)
 
+;; scroll-barを非表示
+  (scroll-bar-mode 0))
 ;;カーソル点滅をやめる
 (blink-cursor-mode 0)
 
