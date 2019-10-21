@@ -1,1 +1,0 @@
-kamedatomoaki@kamedatomoakinoMacBook-Pro.local.18026
